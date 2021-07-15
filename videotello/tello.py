@@ -73,3 +73,5 @@ class TelloDrone(Tello):
   def get_tof(self) -> int:
     return self.get_distance_tof()
 
+  def __del__(self):
+    pass
