@@ -108,6 +108,7 @@ test.py
 
 # Video Files
 *.avi
+*.mp4
 
 # Photo Files
 *.png

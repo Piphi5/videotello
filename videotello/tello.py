@@ -5,7 +5,7 @@ import threading
 import time
 
 class TelloDrone(Tello):
-  video_args = [cv2.VideoWriter_fourcc(*'mp4v'), 30.0, (1280, 720)]
+  video_args = [cv2.VideoWriter_fourcc(*'H264'), 30.0, (1280, 720)]
   video_output = None
   video_thread = None
   is_recording = False
@@ -33,7 +33,7 @@ class TelloDrone(Tello):
   def start_recording(self):
     timestamp = self.get_timestamp()
     height, width, _ = self.get_frame_read().frame.shape
-    self.video_output = cv2.VideoWriter(f'{timestamp}.avi', cv2.VideoWriter_fourcc(*'XVID'), 30, (width, height))
+    self.video_output = cv2.VideoWriter(f'{timestamp}.mp4', cv2.VideoWriter_fourcc(*'mp4v'), 30, (width, height))
     self.is_recording = True
     self.video_thread = threading.Thread(target=self._take_video)
 

@@ -5,7 +5,7 @@ with open('README.md', 'r') as fh:
 
 setuptools.setup(
     name='videotello',
-    version='0.0.1-beta',
+    version='0.0.2-beta',
     author='Matteo Kimura',
     author_email='mateus.sakata@gmail.com',
     description='An easy framework to support DJI Tello Video Recording in Python 3',
